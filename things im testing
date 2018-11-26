@@ -1,0 +1,2 @@
+    // let some group of people who solved some easteregg clues use a special command/some custom non-admin role
+    .add(3, (client, message) => message.guild.settings.solvers.includes(message.author.id))
