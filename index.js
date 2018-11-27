@@ -6,9 +6,6 @@ Client.defaultPermissionLevels
     .add(6, (client, message) => message.guild && message.member.permissions.has('ADMINISTRATOR'), { fetch: true })
     // add a role above guild owners that let your support team help setup/troubleshoot on other guilds.
     .add(8, (client, message) => botSupportTeam.includes(message.author.id))
-    .add(9, ({ client, message }) => botOwner.includes(message.author.id), { break: true })
-    // Allows the bot owner to use Bot Owner only commands, which silently fail for other users.
-    .add(10, ({ client, message }) => botOwner.includes(message.author.id));
 new Client({
     fetchAllMembers: false,
     defaultPermissionLevels: true,
