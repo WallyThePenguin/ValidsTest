@@ -30,8 +30,8 @@ module.exports = class extends Command {
             subcommands: false
         });
     }
-    async run(msg, [announcement, color]) {
-        msg.guild.members.map(m => m.send(`**Announcement: **`+ color + announcement));
+    async run(msg, [ announcement ]) {
+        msg.guild.members.map(m => m.send(`**Announcement: **`+ announcement));
     }
 
     async init() {
