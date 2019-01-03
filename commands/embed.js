@@ -12,7 +12,7 @@ module.exports = class extends Command {
 		});
 	}
 
-	async run(message, [ color, says1, says2 ]) {
+	async run(message, [ color, says2 ]) {
         message.delete()
 		message.send(new MessageEmbed()
 		.setColor(color)
