@@ -16,7 +16,7 @@ module.exports = class extends Command {
         message.delete()
 		message.send(new MessageEmbed()
 		.setColor(color)
-        	.setDescription(says2)
+        	.setDescription(says2))
     }
 
 }
